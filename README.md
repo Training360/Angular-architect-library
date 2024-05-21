@@ -6,6 +6,9 @@ Creating own libraries for Angular with Nx
 - [monorepo explanation](https://monorepo.tools/#what-is-a-monorepo)
 - [monorepo magyarul](https://thecodingadventure.com/miert-monorepo/)
 
+## Create a monorepo
+- `npx create-nx-workspace@latest library-app --preset angular-monorepo`
+
 ## Create a new Library
 - [Library generator](https://nx.dev/nx-api/angular/generators/library)
 - [Library schema](https://github.com/nrwl/nx/blob/master/packages/angular/src/generators/library/schema.json)
