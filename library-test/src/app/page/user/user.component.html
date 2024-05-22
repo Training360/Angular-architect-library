@@ -1,0 +1,38 @@
+<div class="d-flex">
+  <div class="w-100">
+    <h2>Users</h2>
+  </div>
+  <div class="flex-shrink-1">
+    <button [routerLink]="['/user-editor', 0]" class="btn btn-success">Add</button>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Category</th>
+      <th>Country</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users$ | async; track $index) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.category }}</td>
+        <td>{{ user.country }}</td>
+        <td>
+          <div class="btn-group">
+            <button [routerLink]="['/user-editor', user.id]" class="btn btn-primary">Edit</button>
+            <button (click)="onRemove(user)" class="btn btn-danger">Delete</button>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

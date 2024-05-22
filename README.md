@@ -48,7 +48,7 @@ Creating own libraries for Angular with Nx
 - `npx nx run library-app:serve`
 - Save it into the start script in the package.json file!
 
-## Use the library in the app
+## Use the library in the app in development
 - The path of the library from the tsconfig.base.json:
 - `@cherryapp/form-controls`
 - Import the component from the path:
@@ -66,3 +66,62 @@ imports: [
   <lib-ngc-form-controls></lib-ngc-form-controls>
 </div>
 ```
+
+## Developing a new form control component
+- `cd .\ngc-form-controls`
+- `npx nx g @nx/angular:component rating`
+- Choose the right path.
+- Import the new compnent into the appcomponent and display it.
+
+## BUILD the Library
+- Publish assets into the package, in the ng-package.json file:
+```json
+{
+  
+  "assets": [
+    {
+      "input": "src/assets",
+      "glob": "**/*",
+      "output": "assets"
+    }
+  ]
+}
+```
+
+- ONLY FOR DEVELOPMENT, place the following settings the parent's project.json:
+```json
+"assets": [
+  "apps/library-app/src/favicon.ico",
+  "apps/library-app/src/assets",
+  {
+    "glob": "**/*",
+    "input": "ngc-form-controls/src/assets",
+    "output": "assets"
+  }
+],
+```
+
+- `npx nx run ngc-form-controls:build --prod`
+- When we build the entire application, the library also will be built:
+- `npx nx run library-app:build --prod`
+
+## PUBLISH the Library
+- `npm login`
+- `npm adduser`
+- `npx nx run ngc-form-controls:build --prod`
+- `cd dist/ngc-form-controls`
+- `npm publish --access=public`
+
+## Using the Library in production
+- Create a new Angular application
+- `npm i ngc-form-controls`
+- Import the desired component:
+- `import { CountrySelectorComponent } from 'ngc-form-controls';`
+- Include it into the template:
+```html
+<div class="form-group">
+  <label for="name">Country</label>
+  <ngc-country-selector formControlName="country"></ngc-country-selector>
+</div>
+```
+- [Sample application](./library-test/)

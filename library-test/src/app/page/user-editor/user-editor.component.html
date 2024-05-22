@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+  <form (ngSubmit)="onSubmit()" class="w-50" [formGroup]="userForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="string" class="form-control" id="name" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="string" class="form-control" id="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input type="string" class="form-control" id="category" formControlName="category">
+    </div>
+    <div class="form-group">
+      <label for="name">Country</label>
+      <ngc-country-selector formControlName="country"></ngc-country-selector>
+    </div>
+
+    <div class="d-flex">
+      <button type="submit" class="btn btn-primary w-100 btn-lg">Save</button>
+    </div>
+  </form>
+</div>
+
+<pre>
+  {{ userForm.value | json }}
+</pre>

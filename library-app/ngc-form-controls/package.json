@@ -1,10 +1,10 @@
 {
-  "name": "@cherryapp/form-controls",
-  "version": "0.0.1",
+  "name": "ngc-form-controls",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0"
   },
   "dependencies": {

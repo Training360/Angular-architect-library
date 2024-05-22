@@ -2,7 +2,7 @@
   "name": "ngc-form-controls",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "ngc-form-controls/src",
-  "prefix": "lib",
+  "prefix": "ngc",
   "projectType": "library",
   "tags": [],
   "targets": {
