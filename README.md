@@ -35,7 +35,7 @@ Creating own libraries for Angular with Nx
   "font-awesome": "^4.7.0"
 },
 ```
-- Also add packages to the devDependencies of the parent project (for development):
+- Also add packages to the devDependencies of the parent project (only for development):
 ```json
 "devDependencies": {
   "bootstrap": "^5.2.0",
