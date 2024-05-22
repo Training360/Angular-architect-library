@@ -106,6 +106,7 @@ imports: [
 - `npx nx run library-app:build --prod`
 
 ## PUBLISH the Library
+- [Article](https://itnext.io/leverage-nx-to-publish-your-angular-library-on-npm-15a9e77b6602)
 - `npm login`
 - `npm adduser`
 - `npx nx run ngc-form-controls:build --prod`
