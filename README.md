@@ -126,3 +126,9 @@ imports: [
 </div>
 ```
 - [Sample application](./library-test/)
+
+## Testing
+- Unit testing of the library:
+- `npx nx run icell-form-controls:test`
+- E2E testing of the parent application:
+- `npx nx run library-app-e2e:e2e`
