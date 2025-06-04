@@ -29,7 +29,7 @@ Creating own libraries for Angular with Nx
 ## Adding dependencies to the Library
 - Install Bootstrap and Font-awesome packages: `npm i -D bootstrap font-awesome`
 - `cd ngc-form-controls`
-- Add packages to the package.json's peerDependencies (it needs for production):
+- Add packages to the package.json's peerDependencies (it is needed for production):
 ```json
 "peerDependencies": {
   "bootstrap": "^5.2.0",
@@ -43,7 +43,7 @@ Creating own libraries for Angular with Nx
   "font-awesome": "^4.7.0"
 },
 ```
-- Import Bootstrap into the css:
+- Import Bootstrap into the CSS:
 
 ## Run the project
 - `npx nx run library-app:serve`
@@ -72,7 +72,7 @@ imports: [
 - `cd .\ngc-form-controls`
 - `npx nx g @nx/angular:component rating`
 - Choose the right path.
-- Import the new compnent into the appcomponent and display it.
+- Import the new component into the app component and display it.
 
 ## BUILD the Library
 - Publish assets into the package, in the ng-package.json file:
