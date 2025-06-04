@@ -27,6 +27,7 @@ Creating own libraries for Angular with Nx
 - `npx nx g @nx/angular:library ngc-form-controls --publishable --buildable --import-path=@cherryapp/form-controls`
 
 ## Adding dependencies to the Library
+- Install Bootstrap and Font-awesome packages: `npm i -D bootstrap font-awesome`
 - `cd ngc-form-controls`
 - Add packages to the package.json's peerDependencies (it needs for production):
 ```json
